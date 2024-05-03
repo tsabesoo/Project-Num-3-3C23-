@@ -1,0 +1,119 @@
+version: "3.1"
+
+intents:
+  - check_in
+  - luggage_limit
+  - cancel_flight
+  - can_policy
+  - take_of_time
+  - landing_time
+  - seat_booking
+  - travel_time
+  - restricted_items
+  - num_seat
+  - departure_gate
+  - upgrade_to_business_class
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform
+  - needed_class
+
+actions:
+  - action_check_gate
+  - action_ask_destination
+  - action_check_take_of_time
+  - action_check_Landing_time
+  - action_check_travel_time
+  - action_seat
+  - action_check_in
+  - action_ask_reference_number
+  - action_ask_passport_number
+  - action_change_booking
+
+
+responses:
+  utter_luggage_limit:
+    - text: "You can check in as many bags as you like up to the weight allowance for your travel class. Each individual bag must not weigh more than 32kg (for more details please log in to our website)"
+
+  utter_can_policy:
+    - text: "Please log in to our website to get full details about our policy"
+
+  utter_cancel_flight:
+    - text: "Your ticket cancelation request sent successfully, Please wait until our agent connect with you"
+
+  utter_seat_booking_class:
+    - text: "Which class do you prefer, Economy or Business?"
+
+  utter_seat_count:
+    - text: "We have only a few seats remaining in economy class. Please book your seat as soon as possible"
+
+  utter_restricted_items:
+    - text: "Restricted items on flights typically include sharp objects like knives, firearms, and explosives, as well as flammable materials, corrosive substances, and certain liquids exceeding the 3-1-1 rule. Sporting equipment such as baseball bats or golf clubs may also be restricted for safety reasons. Passengers should check airline and aviation authority guidelines to ensure compliance with regulations."
+
+  utter_upgrade_to_business_class:
+    - text: "Please wait until our agent connects with you"
+    
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+entities:
+  - number
+  - destination
+  - class
+  - passport_number
+  - reference_number
+
+slots:
+  number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: number
+
+  destination:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: destination
+
+  class:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: class
+  
+  passport_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: passport_number
+    
+  reference_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: reference_number
+
+session_config:
+  session_expiration_time: 60

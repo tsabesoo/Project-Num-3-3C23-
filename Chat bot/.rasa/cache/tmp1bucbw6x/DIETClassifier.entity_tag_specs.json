@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-class",
+      "2": "I-class",
+      "3": "L-class",
+      "4": "U-class",
+      "5": "B-destination",
+      "6": "I-destination",
+      "7": "L-destination",
+      "8": "U-destination",
+      "9": "B-number",
+      "10": "I-number",
+      "11": "L-number",
+      "12": "U-number",
+      "13": "B-passport_number",
+      "14": "I-passport_number",
+      "15": "L-passport_number",
+      "16": "U-passport_number",
+      "17": "B-reference_number",
+      "18": "I-reference_number",
+      "19": "L-reference_number",
+      "20": "U-reference_number",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-class": 1,
+      "I-class": 2,
+      "L-class": 3,
+      "U-class": 4,
+      "B-destination": 5,
+      "I-destination": 6,
+      "L-destination": 7,
+      "U-destination": 8,
+      "B-number": 9,
+      "I-number": 10,
+      "L-number": 11,
+      "U-number": 12,
+      "B-passport_number": 13,
+      "I-passport_number": 14,
+      "L-passport_number": 15,
+      "U-passport_number": 16,
+      "B-reference_number": 17,
+      "I-reference_number": 18,
+      "L-reference_number": 19,
+      "U-reference_number": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

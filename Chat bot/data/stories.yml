@@ -1,0 +1,166 @@
+version: "3.1"
+
+stories:
+
+- story: Check in
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: check_in
+    - action: action_ask_destination
+    - action: action_listen
+    - intent: inform
+      entities:
+        - destination: "us"
+    - action: action_ask_passport_number
+    - action: action_listen
+    - intent: inform
+      entities:
+        - passport_number: "998877665"
+    - action: action_ask_reference_number
+    - action: action_listen
+    - intent: inform
+      entities:
+        - reference_number: "AAB123456"
+    - action: action_check_in
+
+
+- story: Luggage limit
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: luggage_limit
+  - action: utter_luggage_limit
+
+- story: cancel flight
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: cancel_flight
+    - action: utter_cancel_flight
+
+- story: policy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: can_policy
+  - action: utter_can_policy
+
+- story: Departure gate
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: departure_gate
+    - action: action_ask_destination
+    - action: action_listen
+    - intent: inform
+      entities:
+        - destination: "us"
+    - action: action_check_gate
+
+- story: Take off time
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: take_of_time
+    - action: action_ask_destination
+    - action: action_listen
+    - intent: inform
+      entities:
+        - destination: "us"
+    - action: action_check_take_of_time
+
+- story: Landing time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: landing_time
+  - action: action_ask_destination
+  - action: action_listen
+  - intent: inform
+    entities:
+      - destination: "us"
+  - action: action_check_Landing_time
+
+- story: Travel time Us
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: travel_time
+  - action: action_ask_destination
+  - action: action_listen
+  - intent: inform
+    entities:
+      - destination: "us"
+  - action: action_check_travel_time
+
+
+- story: Seat booking
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: seat_booking
+  - action: utter_seat_booking_class
+  - intent: needed_class
+  - slot_was_set:
+    - class: true
+  - action: utter_seat_count
+  - intent: num_seat
+  - slot_was_set:
+    - number: true
+  - action: action_seat
+
+
+- story: upgrade_to_business_class
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: upgrade_to_business_class
+  - action: utter_upgrade_to_business_class
+
+- story: restricted items
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restricted_items
+  - action: utter_restricted_items
+
+- story: Change booking
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: change_booking
+  - action: action_ask_destination
+  - action: action_listen
+  - intent: inform
+    entities:
+      - destination: "canada"
+  - action: action_change_booking
+
+  
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

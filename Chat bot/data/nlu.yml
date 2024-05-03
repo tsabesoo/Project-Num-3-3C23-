@@ -1,0 +1,432 @@
+version: "3.1"
+
+nlu:
+- intent: check_in
+  examples: |
+    - I need to check in for my flight.
+    - Can I check in online?
+    - How do I go about checking in for my flight?
+    - Is online check-in available?
+    - I want to check in before my flight.
+    - What's the process for checking in?
+    - Do I need to check in at the airport?
+    - Can you help me with the check-in procedure?
+    - I'd like to check in online, please.
+    - What are the steps for checking in?
+    - Could you guide me through the check-in process?
+    - I'm not sure how to check in, can you help?
+    - What should I do to check in for my flight?
+    - Can you explain how the check-in process works?
+    - I need to figure out how to check in for my flight.
+    - It's time for me to check in, what do I do?
+    - I must check in for my flight, please assist.
+    - Checking in for my flight is my next step, how do I proceed?
+    - I have to check in for my flight, can you show me how?
+    - I'm lost with the check-in process, can you assist?
+    - I need some help with checking in, where do I start?
+    - Can someone guide me through the check-in steps?
+    - I require assistance with my flight check-in, who do I contact?|
+    - Let's start the check-in process for my flight.
+    - I'm ready to check in, what's the first step?
+    - I'd like to begin checking in now, how do we proceed?
+    - I want to initiate the check-in for my flight, please help.
+
+- intent: luggage_limit
+  examples: |
+    - What is the luggage limit for this flight?
+    - What is the maximum weight of laggage I can carry?
+    - Is there a luggage limit for this flight?
+    - Can I carry 15kg of luggage for my travel?
+    - How much luggage can I check in for my flight?
+    - What are the size and weight restrictions for checked luggage?
+    - Can I carry sports equipment as part of my checked luggage?
+    - Are there any items that are not allowed in checked luggage?
+    - How do I add extra luggage to my booking?
+    - What should I do if my luggage exceeds the weight limit?
+    - Is there a fee for checking in additional bags?
+    - How can I track my checked luggage?
+    - What is the process for claiming my luggage at the destination?
+    - Can I check in my luggage online?
+    - What happens if my checked luggage is lost or damaged?
+    - How early do I need to check in my luggage at the airport?
+    - Are there any special procedures for checking in fragile items?
+    - Can I lock my checked luggage?
+    - What do I need to declare at customs regarding my luggage?
+    - How do I report a missing item from my checked luggage?
+    - Is it possible to check in luggage for an international flight online?
+    - What are the guidelines for carry-on luggage?
+
+- intent: cancel_flight
+  examples: |
+    - How do I cancel my flight?
+    - Procedure of cancel a flight?
+    - Please cancel my flight.
+    - Can You please cancel my flight?
+    - How do I cancel my flight?
+    - What is the procedure for flight cancellation?
+    - Can you guide me through the process of cancelling my flight?
+    - I need to cancel my flight, what steps should I take?
+    - What are my options if I need to cancel my flight?
+    - Is there a penalty for cancelling my flight?
+    - How can I cancel my flight online?
+    - What information do I need to provide to cancel my flight?
+    - Can I cancel my flight and get a refund?
+    - What's the deadline for cancelling my flight without a fee?
+    - I booked the wrong date, how can I cancel my flight?
+    - Are there any circumstances where I can cancel my flight for free?
+    - How long does it take to process a flight cancellation?
+    - Who do I contact to cancel a flight?
+    - What happens to my seat selection if I cancel my flight?
+    - Can I cancel part of my trip or does it have to be the entire itinerary?
+    - How do I know if my flight cancellation was successful?
+    - What are the consequences of cancelling a flight last minute?
+
+
+- intent: can_policy
+  examples: |
+    - What is your cancellation policy?
+    - can you tell me about the cancellation policy of your flight?
+    - cancellation policy of your flight?
+    - Is there any cancellation plicy of your flight?
+    - cancellation Policy of your flight?
+    - What is the airline's policy on carry-on luggage?
+    - Can you tell me about the cancellation policy for my flight?
+    - I'd like to know the airline's policy on traveling with pets.
+    - What are the policies for traveling with children or infants?
+    - How does the airline handle flight delays and cancellations?
+    - Can you explain the airline's policy on missed connections?
+    - What is the refund policy if I cancel my flight?
+    - Are there any specific policies for international travel I should be aware of?
+    - What is the policy for changing the date or time of my flight?
+    - How do I find out about the airline's policy for lost or damaged luggage?
+    - Is there a policy for early check-in or late check-out?
+    - What are the airline's policies regarding special assistance?
+    - Can you provide information on the airline's privacy policy?
+    - What is the policy on electronic devices during the flight?
+    - How can I learn about the airline's environmental policies?
+    - What are the policies for seat selection and upgrades?
+    - Can you explain the airline's policy on in-flight meals and beverages?
+    - What is the policy for traveling with medical equipment or medication?
+    - What is the policy for traveling with musical instruments?
+    - Can you explain the airline's policy on unaccompanied minors?
+    - What are the policies regarding flight delays due to weather?
+    - Is there a policy for passengers with allergies or dietary restrictions?
+    - How does the airline handle overbooked flights?
+    - Can you provide information on the policy for changing destinations?
+    - What is the policy for passengers with disabilities or mobility issues?
+    - Are there any restrictions on carrying liquids in hand luggage?
+    - How does the airline handle lost and found items?
+    - Can you explain the policy for upgrading to business or first class?
+    - What are the policies for traveling with firearms or ammunition?
+    - Is there a policy for passengers who miss their connecting flights?
+    - How does the airline handle medical emergencies during flights?
+    - What is the policy for traveling with pets in the cabin?
+    - Can you provide information on the airline's loyalty program?
+    - What are the policies for traveling with infants or newborns?
+    - Is there a policy for passengers who need oxygen during the flight?
+    - How does the airline handle disruptive behavior by passengers?
+
+
+
+- intent: take_of_time
+  examples: |
+    - At what time is the flight taking off?
+    - Is there a specific time for take off?
+    - When should I be at the boarding area?
+    - When is the take of time?
+    - What time does my flight take off?
+    - Can you tell me the scheduled takeoff time for my flight?
+    - I need to know the departure time of my flight, can you help?
+    - How do I find out the exact takeoff time for my flight?
+    - Is there a way to check the takeoff time for my flight online?
+    - Can you provide the takeoff schedule for today's flights?
+    - What's the process for confirming my flight's takeoff time?
+    - How early should I arrive before the takeoff time?
+    - Are the takeoff times listed the actual time the plane leaves the ground?
+    - Do takeoff times change often?
+    - Where can I get updates on my flight's takeoff time?
+    - What happens if I miss the takeoff time?
+    - How is takeoff time determined for flights?
+    - Can takeoff times be affected by weather conditions?
+    - What's the latest I can arrive at the gate before takeoff time?
+    - How can I get notifications about changes to the takeoff time?
+    - Is the takeoff time the same as the boarding time?
+    - What do I do if the takeoff time is too early or too late for me?
+    - I also need to know the take-off time.
+    - Can you tell me the take-off time as well?
+    - I'd like to know the take-off time too.
+
+
+
+- intent: inform
+  examples: |
+    - Yes, my destination is the [United States](destination).
+    - That's correct, I'm heading to the [US](destination).
+    - Confirming, my flight is to the [United States](destination).
+    - Yes, I'm flying to the [US](destination).
+    - Affirmative, my final destination is in the [United States](destination).
+    - That's right, I'm going to the [United States](destination).
+    - Yes, the [US](destination) is my destination.
+    - Confirming, I'll be arriving in the [United States](destination).
+    - Yes, my destination is [Canada](destination).
+    - That's correct, I'm heading to [Canada](destination).
+    - Confirming, my flight is to [Canada](destination).
+    - Yes, I'm flying to [Canada](destination).
+    - Affirmative, my final destination is in [Canada](destination).
+    - That's right, I'm going to [Canada](destination).
+    - Yes, [Canada](destination) is my destination.
+    - Confirming, I'll be arriving in [Canada](destination).
+    - I need to go to [us](destination)
+    - My passport number is [123456789](passport_number).
+    - Here’s my passport number: [987654321](passport_number).
+    - Passport details: [112233445](passport_number).
+    - For the form, my passport number is [998877665](passport_number).
+    - I need to update my passport number to [556677889](passport_number).
+    - Can you check my booking with passport number [443322110](passport_number)?
+    - I’m entering my passport number as [667788990](passport_number).
+    - To confirm, this is my passport number: [102938475](passport_number).
+    - I was asked to provide my passport number, which is [5647382910](passport_number).
+    - For identification, my passport number is [192837465](passport_number).
+    - My reference number is [AB123456](reference_number).
+    - Here’s my reference number: [CD987654](reference_number).
+    - Reference details: [EF112233](reference_number).
+    - For the form, my reference number is [GH998877](reference_number).
+    - I need to update my reference number to [IJ556677](reference_number).
+    - Can you check my booking with reference number [KL443322](reference_number)?
+    - I’m entering my reference number as [MN667788](reference_number).
+    - To confirm, this is my reference number: [OP102938](reference_number).
+    - I was asked to provide my reference number, which is [QR564738](reference_number).
+    - For identification, my reference number is [ST192837](reference_number).
+
+- intent: landing_time
+  examples: |
+    - When will I land in my destination?
+    - At what time am I suppose to land?
+    - When will the flight end?
+    - When can I get off the flight?
+    - At what time does the flight end?
+    - What time does my flight land?
+    - Can you tell me the scheduled landing time for my flight?
+    - I need to know the arrival time of my flight, can you help?
+    - How do I find out the exact landing time for my flight?
+    - Is there a way to check the landing time for my flight online?
+    - Can you provide the landing schedule for today’s flights?
+    - What’s the process for confirming my flight’s landing time?
+    - How early should I arrive at the airport before the landing time?
+    - Are the landing times listed the actual time the plane touches down?
+    - Do landing times change often?
+    - Where can I get updates on my flight’s landing time?
+
+- intent: travel_time
+  examples: |
+    - How long is the flight?
+    - can you tell me how long will i be in the flight?
+    - is this the longest flight?
+    - what is travel time
+    - how long does the flight takes?
+    - What’s the total travel time for my flight?
+    - How long is the flight from departure to arrival?
+    - Can you tell me the duration of the flight?
+    - I need to know the flight’s travel time, can you help?
+    - Is there a way to check the flight duration online?
+    - How do I find out the exact travel time for my flight?
+    - What’s the average travel time for this flight route?
+
+- intent: seat_booking
+  examples: |
+    - i want to book a seat on the flight?
+    - i need a seat for the flight?
+    - can i book a windown seat?
+    - i am trying to reserve a seat
+    - what are the seat option for this flight?
+    - how can I book a seat for my flight
+    - what's the process for reserving a seat
+    - can you guide me through seat selection
+    - I want to purchase a ticket, how do I proceed
+    - how can I buy a flight ticket online
+    - tell me the steps to book a seat
+    - is there an option to choose my seat during booking
+    - what's the procedure for ticket purchase
+    - can I select my seat while buying a ticket
+    - how do I reserve a specific seat on the plane
+    - how do I reserve a seat on the flight
+    - can I choose my seat during ticket purchase
+    - what's the process for booking a specific seat
+    - I want to buy a ticket, how should I proceed
+    - how can I select my seat while booking
+    - tell me about seat reservation options
+    - is there an option to pick my seat online
+    - guide me through the ticket purchase steps
+    - can I book a particular seat in advance
+    - what's the procedure for seat selection
+
+
+- intent: needed_class
+  examples: |
+    - I want to book a seat in [economy](class) class(class).
+    - Can you help me with booking an [economy](class) class seat?
+    - I prefer [economy](class) class for my flight.
+    - I need to reserve a seat in the [economy](class) section.
+    - Please book me a seat in the [economy](class) class.
+    - I'm looking to fly in the [economy](class) class.
+    - How can I book a seat in [economy](class)?
+    - I would like to book a seat in the [business](class) class.
+    - Can you help me with reserving a [business](class) class seat?
+    - I prefer the [business](class) class for my flight.
+    - I need to book a seat in the [business](class) section.
+    - Please reserve a seat for me in the [business](class) class.
+    - I'm looking to fly in the [business](class) class.
+    - How can I book a seat in the [business](class) class?
+    - [Business](class) class booking, please.
+
+- intent: num_seat
+  examples: |
+    - i want to [2](number) seat
+    - is [3](number) seat available
+    - can i get the [9](number) seat
+    - [7](number) seat
+
+- intent: departure_gate
+  examples: |
+    - where is my departure gate
+    - where should i be to get on the flight
+    - from which gate does my flight departures
+    - departure gate
+    - which gate do I need to go to for boarding
+    - can you tell me my boarding gate number
+    - how do I find my flight's departure gate
+    - I need to know the gate for my departure
+    - what's the gate assignment for my flight
+    - could you direct me to the gate for my flight
+    - is the departure gate information available
+    - gate number for my flight
+    - where's the gate for my flight located
+    - inform me about my flight gate details
+
+- intent: upgrade_to_business_class
+  examples: |
+    - can i upgrade my flight to business class
+    - how can i upgrade my flight
+    - i want to travel in business class
+    - business class deals
+    - upgrade from economy to business
+    - how can I upgrade my ticket to business class
+    - what's the process for a business class upgrade
+    - can I change my seat to business class
+    - I want to upgrade to business class, how do I do that
+    - is it possible to get a business class upgrade at the airport
+    - what are the steps to upgrade my flight to business class
+    - tell me how to upgrade my economy ticket to business
+    - I'm interested in a business class upgrade, what should I do
+    - can you assist me with upgrading to business class
+    - options for upgrading my current booking to business class
+
+
+- intent: restricted_items
+  examples: |
+    - can i bring a knife on the flight?
+    - what items are strictly not allowed
+    - is it possible to bring liquid substance
+    - what are prohibited from the flight
+    - restricted items
+    - what items are not allowed on the plane
+    - can you list the prohibited items for carry-on luggage
+    - which items are restricted for air travel
+    - tell me about the items I can't bring in my hand baggage
+    - I'd like to know the restricted items for my flight
+    - what are the security restrictions on liquids
+    - are there any items I should not pack in my luggage
+    - could you inform me about the banned items on flights
+    - list of items not permitted in cabin baggage
+    - what can't I take with me on the aircraft
+
+        
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
